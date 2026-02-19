@@ -8,12 +8,13 @@ const navItems = [
 
 export default function Header() {
   const location = useLocation();
+  const logoSrc = `${import.meta.env.BASE_URL}logo.svg`;
 
   return (
     <header className="sticky top-0 z-50 border-b bg-card/80 backdrop-blur-md">
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2 font-display text-xl font-bold text-primary">
-          <img src="/logo.svg" alt="ExpertBook" className="h-6 w-6" />
+          <img src={logoSrc} alt="ExpertBook" className="h-6 w-6" />
           ExpertBook
         </Link>
         <nav className="flex items-center gap-1">
